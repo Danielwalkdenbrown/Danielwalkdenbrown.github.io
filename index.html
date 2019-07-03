@@ -7,6 +7,8 @@
   <link href="https://fonts.googleapis.com/css?family=Antic+Slab" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Poppins:500&display=swap" rel="stylesheet">
   <link href="Index.css" rel="stylesheet" />
+  <script src="anime.min.js"></script>
+  <script src="index.js"></script>
 </head>
 
 <body>
@@ -16,7 +18,16 @@
       </div>
       <a href="/snake.html">Snake Game</a>
     </nav>
-
+    <div class="shape">
+      <svg width="500" height="500" viewBox="0 0 500 500" id="coolThing">
+        <filter id="displacementFilter">
+          <feTurbulence type="turbulence" baseFrequency=".05" numOctaves="2" result="turbulence" />
+          <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="15" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+        <polygon points="64 68.64 8.574 100 63.446 67.68 64 4 64.554 67.68 119.426 100"
+          style="filter: url(#displacementFilter)" fill="currentColor" />
+      </svg>
+    </div>
   </div>
 
 </body>
