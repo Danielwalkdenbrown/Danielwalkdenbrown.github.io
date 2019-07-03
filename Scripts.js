@@ -5,19 +5,25 @@
     const gameCanvas = document.getElementById("gameCanvas");
     // Return a two dimensional drawing context
     const ctx = gameCanvas.getContext("2d");
+    const SQUARE_SIZE = 50;
     // Horizontal velocity
-    let dx = 10;
+    let dx = SQUARE_SIZE;;
     // Vertical velocity
     let dy = 0;
-    let snake = [
-        { x: 150, y: 150 },
-        { x: 140, y: 150 },
-        { x: 130, y: 150 },
-        { x: 120, y: 150 },
-        { x: 110, y: 150 },
+
+    const initialXPosition = 100;
+
+    const INITIAL_SNAKE_STATE = [
+        { x: initialXPosition + SQUARE_SIZE * 4, y: 150 },
+        { x: initialXPosition + SQUARE_SIZE * 3, y: 150 },
+        { x: initialXPosition + SQUARE_SIZE * 2, y: 150 },
+        { x: initialXPosition + SQUARE_SIZE, y: 150 },
+        { x: initialXPosition, y: 150 },
 
     ];
-   
+
+    let snake = INITIAL_SNAKE_STATE.slice();
+
     let foodX = -1;
     let foodY = -1;
     let score = 0;
@@ -25,16 +31,9 @@
     const Restart_Button = document.getElementById('restart-button');
 
     function restartGame() {
-        const Initial_Snake_State = [
-            { x: 150, y: 150 },
-            { x: 140, y: 150 },
-            { x: 130, y: 150 },
-            { x: 120, y: 150 },
-            { x: 110, y: 150 },
-    
-        ];
+
         Restart_Button.classList = "hidden";
-        main(Initial_Snake_State);
+        main(INITIAL_SNAKE_STATE.slice());
     }
 
     Restart_Button.addEventListener('click', restartGame)
@@ -53,8 +52,8 @@
     function drawSnakePart(snakePart) {
         ctx.fillStyle = 'lightgreen';
         ctx.strokestyle = 'darkgreen';
-        ctx.fillRect(snakePart.x, snakePart.y, 10, 10);
-        ctx.strokeRect(snakePart.x, snakePart.y, 10, 10);
+        ctx.fillRect(snakePart.x, snakePart.y, SQUARE_SIZE, SQUARE_SIZE);
+        ctx.strokeRect(snakePart.x, snakePart.y, SQUARE_SIZE, SQUARE_SIZE);
     }
 
 
@@ -62,7 +61,7 @@
         if (intialPosition === undefined) {
             snake.forEach(drawSnakePart);
         } else {
-            dx = 10;
+            dx = SQUARE_SIZE;
             dy = 0;
             snake = intialPosition;
             snake.forEach(drawSnakePart);
@@ -101,25 +100,25 @@
         const DOWN_KEY = 40;
         const R_KEY = 82
         const keyPressed = event.keyCode;
-        const goingUp = dy === -10;
-        const goingDown = dy === 10;
-        const goingRight = dx === 10;
-        const goingLeft = dx === -10;
+        const goingUp = dy === -SQUARE_SIZE;
+        const goingDown = dy === SQUARE_SIZE;
+        const goingRight = dx === SQUARE_SIZE;
+        const goingLeft = dx === -SQUARE_SIZE;
         if (keyPressed === LEFT_KEY && !goingRight) {
-            dx = -10;
+            dx = -SQUARE_SIZE;
             dy = 0;
         }
         if (keyPressed === UP_KEY && !goingDown) {
             dx = 0;
-            dy = - 10;
+            dy = -SQUARE_SIZE;
         }
         if (keyPressed === RIGHT_KEY && !goingLeft) {
-            dx = 10;
+            dx = SQUARE_SIZE;
             dy = 0;
         }
         if (keyPressed === DOWN_KEY && !goingUp) {
             dx = 0;
-            dy = 10;
+            dy = SQUARE_SIZE;
         }
         if (keyPressed === R_KEY && didGameEnd()) {
             restartGame();
@@ -149,20 +148,20 @@
 
     function randomTen(max) {
         const randomNumber = (Math.random() * max);
-        const randomTen = Math.round(randomNumber / 10) * 10;
+        const randomTen = Math.round(randomNumber / SQUARE_SIZE) * SQUARE_SIZE;
         return randomTen;
     }
 
     function setFoodPosition() {
-        foodX = randomTen(gameCanvas.width - 10);
-        foodY = randomTen(gameCanvas.height - 10);
+        foodX = randomTen(gameCanvas.width - SQUARE_SIZE);
+        foodY = randomTen(gameCanvas.height - SQUARE_SIZE);
     }
 
     function drawFood() {
         ctx.fillStyle = 'red';
         ctx.strokeStyle = 'darkred';
-        ctx.fillRect(foodX, foodY, 10, 10);
-        ctx.strokeRect(foodX, foodY, 10, 10);
+        ctx.fillRect(foodX, foodY, SQUARE_SIZE, SQUARE_SIZE);
+        ctx.strokeRect(foodX, foodY, SQUARE_SIZE, SQUARE_SIZE);
     }
 
 
@@ -171,9 +170,9 @@
             if (snake[i].x === snake[0].x && snake[i].y === snake[0].y) return true
         }
         const hitLeftWall = snake[0].x < 0;
-        const hitRightWall = snake[0].x > gameCanvas.width - 10;
+        const hitRightWall = snake[0].x > gameCanvas.width - SQUARE_SIZE;
         const hitToptWall = snake[0].y < 0;
-        const hitBottomWall = snake[0].y > gameCanvas.height - 10;
+        const hitBottomWall = snake[0].y > gameCanvas.height - SQUARE_SIZE;
         return hitLeftWall || hitRightWall || hitToptWall || hitBottomWall
     }
 

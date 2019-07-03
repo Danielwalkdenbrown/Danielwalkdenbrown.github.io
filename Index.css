@@ -1,0 +1,37 @@
+body {
+    background: url( Images/Snow.jpg) no-repeat center center fixed;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+#container{
+    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.6));
+    width: 100vw;
+    height: 100vh;
+}
+
+#menu {
+width: 100vw;
+height: 150px;
+display: flex;
+align-items: center;
+padding-top: 30px;
+padding-left: 30px;
+padding-right: 30px;
+box-sizing: border-box;
+
+}
+
+nav a {
+    font-size: 55px;
+color: white;
+font-family: 'Poppins', sans-serif;
+}
+
+#title {
+font-size: 80px;
+color: white;
+font-family: 'Poppins', sans-serif;
+margin-right: auto;
+}
