@@ -51,9 +51,18 @@ color: white;
 }
 
 #home {
-    font-size: 55px;
+    font-size: 42px;
     color: white;
     font-family: 'Poppins', sans-serif;
     position: absolute;
     padding: 40px;
 } 
+
+#high-score {
+    position: absolute;
+    padding: 40px;
+    right: 0;
+    font-size: 42px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}

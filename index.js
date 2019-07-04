@@ -15,7 +15,6 @@
 // });
 
 function onMobileMenuIconClick(mobileMenuIconElement) {
-    console.log('hello');
     mobileMenuIconElement.classList.toggle('change');
     const mobileMenu = document.getElementById('mobile-menu');
     mobileMenu.classList.toggle('show')
