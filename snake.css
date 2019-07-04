@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+}
+
+.gameContainer {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    padding: 1px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+#score {
+    font-size: 5em;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    text-align: center
+}
+
+#restart-button {
+font-size: 5em;
+background-color: black;
+color: white;
+}
+
+.hidden{
+    display: none;
+}
+
+#restart {
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+}
+#heading {
+    color: white;
+    font-size: 80px;
+}
+
+#home {
+    font-size: 55px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    padding: 40px;
+} 

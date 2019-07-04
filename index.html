@@ -2,8 +2,9 @@
 <html>
 
 <head>
-  <title>Coolest website
+  <title>Daniel W-B
   </title>
+  <link rel="shortcut icon" type="image/png" href="/favicon.png" />
   <link href="https://fonts.googleapis.com/css?family=Antic+Slab" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Poppins:500&display=swap" rel="stylesheet">
   <link href="Index.css" rel="stylesheet" />
@@ -12,24 +13,57 @@
 </head>
 
 <body>
+  <!-- <div class="vimeo-wrapper">
+    <iframe src="https://www.youtube.com/embed/mr2vea2DIio?rel=0&autoplay=1&mute=1&loop=1" frameborder=" 0"
+      webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div> -->
   <div id="container">
-    <nav id="menu">
+    <nav id="header">
       <div id="title"> Daniel W-B
       </div>
-      <a href="/snake.html">Snake Game</a>
+      <div id="menu">
+        <a href="/index.html">Home</a>
+        <a href="/snake.html">Snake Game</a>
+      </div>
+      <div id="mobile-menu-icon" onclick="onMobileMenuIconClick(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
     </nav>
-    <div class="shape">
-      <svg width="500" height="500" viewBox="0 0 500 500" id="coolThing">
-        <filter id="displacementFilter">
-          <feTurbulence type="turbulence" baseFrequency=".05" numOctaves="2" result="turbulence" />
-          <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="15" xChannelSelector="R" yChannelSelector="G" />
-        </filter>
-        <polygon points="64 68.64 8.574 100 63.446 67.68 64 4 64.554 67.68 119.426 100"
-          style="filter: url(#displacementFilter)" fill="currentColor" />
-      </svg>
+    <div id="mobile-menu">
+      <div>
+        <a href="/index.html">Home</a>
+      </div>
+      <div>
+        <a href="/snake.html">Snake Game</a>
+      </div>
+    </div>
+    <!-- <div class="shape">
+    <svg width="500" height="500" viewBox="0 0 500 500" id="coolThing">
+      <filter id="displacementFilter">
+        <feTurbulence type="turbulence" baseFrequency=".05" numOctaves="2" result="turbulence" />
+        <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="15" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <polygon points="64 68.64 8.574 100 63.446 67.68 64 4 64.554 67.68 119.426 100"
+        style="filter: url(#displacementFilter)" fill="currentColor" />
+    </svg> -->
+    <div id="landingPage"></div>
+    <div id="aboutme"> My name is Daniel Walkden-Brown. I was born in Australia. Im 15 Years old
+      and
+      in year 10.
+      <div class="image"></div>
+      <div class="image2"></div>
+      <div id="hobbies"> I love Music both listening to it and playing it, My favorite Artist is Shawn Mendes and my
+        favorite song is “Señorita”. I play Bass Guitar and Acoustic Guitar. I also love Gaming, I have a ps4 and my
+        favorite games are WatchDogs 2, Tom Clancys Wild Lands and Assassins Creed Unity. I love coding as well,
+        making different games and apps.
+      </div>
     </div>
   </div>
 
+
+  <script src="./index.js"></script>
 </body>
 
 </html>

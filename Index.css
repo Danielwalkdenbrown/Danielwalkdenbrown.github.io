@@ -1,40 +1,47 @@
 body {
-    background: url( Images/Snow.jpg) no-repeat center center fixed;
     background-size: cover;
     padding: 0;
     margin: 0;
+    color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 #container{
-    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+}
+
+#header {
+    position: fixed;
     width: 100vw;
-    height: 100vh;
-}
-
-#menu {
-width: 100vw;
-height: 150px;
-display: flex;
-align-items: center;
-padding-top: 30px;
-padding-left: 30px;
-padding-right: 30px;
-box-sizing: border-box;
-
-}
-
-nav a {
-    font-size: 55px;
-     color: white;
-     font-family: 'Poppins', sans-serif;
-     margin-left: 20px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    background-color: black;
 }
 
 #title {
-font-size: 80px;
-color: white;
-font-family: 'Poppins', sans-serif;
-margin-right: auto;
+    font-size: 68px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+#menu {
+    margin-left: auto;
+}
+
+#menu a {
+    margin: 0 20px;
+    font-size: 42px;
+    color: white;
+    font-family: 'Poppins', sans-serif; 
+}
+
+#landingPage {
+    height: 100vh;
 }
 
 .shape {
@@ -44,4 +51,124 @@ margin-right: auto;
 
 #coolThing{
     opacity: 0.6;
+    display: flex;
+
+}
+
+#aboutme {
+    color: white;
+    font-size: 50px;
+}
+
+#hobbies {
+    align-items: left;
+    color: white;
+    font-size: 50px;
+    /* width: 50vw; */
+    /* height: 100vh; */
+}
+div.image {
+    content:url(Images/IMG_0002.JPG);
+    /* padding-top: -50vh; */
+    /* padding-left: 60vw; */
+    width: 900px;
+    }
+
+div.image2 {
+    content:url(Images/MON_9817_r.JPG);
+    /* padding-left: 900px; */
+    padding-top: 200px;
+    width: 500px;
+}
+
+div.image3 {
+    content:url(Images/Scan\ 1.jpeg);
+    padding-left: 900px;
+    padding-top: 200px;
+    width: 500px;
+}
+
+        
+.vimeo-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.vimeo-wrapper iframe {
+    width: 100vw;
+    height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+    min-height: 100vh;
+    min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#mobile-menu-icon {
+    display: none;
+}
+
+#mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    #mobile-menu.show {
+        display: block;
+        position: fixed;
+        top: 150px;
+        background-color: black;
+        width: 100vw;
+        padding-bottom: 20px;
+        transition: 0.2s;
+    }
+
+    #mobile-menu div {
+        padding: 20px 0;
+    }
+
+    #mobile-menu a {
+        color: white;
+        font-size: 42px;
+        padding: 0 40px;
+    }
+
+    #mobile-menu-icon {
+        margin-left: auto;
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+        width: 50px;
+        height: 7px;
+        background-color: white;
+        margin: 8px 0;
+        transition: 0.4s;
+    }
+    
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-11px, 7px);
+        transform: rotate(-45deg) translate(-11px, 7px);
+    }
+    
+    .change .bar2 {
+        opacity: 0;
+    }
+    
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-12px, -10px);
+        transform: rotate(45deg) translate(-12px, -10px);
+    }
+
+    #menu {
+        display: none;
+    }
 }
