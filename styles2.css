@@ -1,4 +1,156 @@
 body {
-    background-color: black;
+    background-color:white;
+    margin: 0;
     
+}
+#menu {
+    margin-left: auto;
+}
+
+#menu a {
+    margin: 0 20px;
+    font-size: 42px;
+    color: white;
+    font-family: 'Poppins', sans-serif; 
+}
+#header {
+    position: fixed;
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    background-color: black;
+}
+#title {
+    font-size: 68px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+#list {
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    box-sizing: border-box;
+
+}
+
+div.photo {
+    content:url(Images/1.JPG);
+    margin: 0 50px;
+    padding-top: 50vh;
+     width: 20vw;
+ 
+}
+div.photo2 {
+    content:url(Images/2.JPG);
+    margin: 0 50px;
+    padding-top: 50vh;
+     width: 20vw;
+ 
+}
+div.photo3 {
+    content:url(Images/3.JPG);
+    margin: 0 50px;
+    padding-top: 50vh;
+     width: 20vw;
+ 
+}
+#list2 {
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    padding-top: 30vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    box-sizing: border-box;
+
+}
+
+div.photo4 {
+    content:url(Images/4.JPG);
+    margin: 0 50px;
+    padding-top: 50vh;
+     width: 20vw;
+}
+
+div.photo5 {
+    content:url(Images/5.JPG);
+    margin: 0 50px;
+    padding-top: 50vh;
+     width: 20vw;
+}
+
+div.photo6 {
+    content:url(Images/6.JPG);
+    margin: 0 50px;
+    padding-top: 50vh;
+     width: 20vw;
+}
+
+#list3 {
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    padding-top: 50vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    box-sizing: border-box;
+
+}
+
+div.photo7 {
+    content:url(Images/7.JPG);
+    margin: 0 50px;
+    padding-top: 50vh;
+     width: 20vw;
+}
+
+div.photo8 {
+    content:url(Images/8.JPG);
+    margin: 0 50px;
+    padding-top: 50vh;
+     width: 20vw;
+}
+
+div.photo9 {
+    content:url(Images/9.JPG);
+    margin: 0 50px;
+    padding-top: 50vh;
+     width: 20vw;
+}
+#list4 {
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    padding-top: 50vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    box-sizing: border-box;
+
+}
+
+div.photo10 {
+    content:url(Images/10.JPG);
+    margin: 0 50px;
+    padding-top: 50vh;
+     width: 20vw;
+}
+
+div.photo11 {
+    content:url(Images/11.JPG);
+    margin: 0 50px;
+    padding-top: 50vh;
+     width: 20vw;
 }

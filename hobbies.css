@@ -1,0 +1,39 @@
+body {
+    background-image: 
+    margin: 0;
+    
+}
+#menu {
+    margin-left: auto;
+}
+
+#menu a {
+    margin: 0 20px;
+    font-size: 42px;
+    color: white;
+    font-family: 'Poppins', sans-serif; 
+}
+#header {
+    position: fixed;
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    background-color: black;
+}
+#title {
+    font-size: 68px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+#aboutme {
+    padding: 200px;
+    color: black;
+    font-size: 50px;
+    width: 50vw;
+}

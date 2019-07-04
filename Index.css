@@ -7,11 +7,11 @@ body {
 }
 
 #container{
-    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.8));
 }
 
 #header {
-    position: fixed;
+ position: fixed;
     width: 100vw;
     height: 150px;
     display: flex;
@@ -20,7 +20,7 @@ body {
     padding-left: 30px;
     padding-right: 30px;
     box-sizing: border-box;
-    background-color: black;
+    background-color: black; 
 }
 
 #title {
@@ -56,36 +56,28 @@ body {
 }
 
 #aboutme {
+    padding: 20px;
     color: white;
     font-size: 50px;
+    width: 50vw;
 }
 
 #hobbies {
     align-items: left;
     color: white;
     font-size: 50px;
-    /* width: 50vw; */
-    /* height: 100vh; */
+
 }
 div.image {
-    content:url(Images/IMG_0002.JPG);
-    /* padding-top: -50vh; */
-    /* padding-left: 60vw; */
-    width: 900px;
+    content:url(Images/3.JPG);
+     width: 900px;
+     padding-left: 60vw;
     }
 
-div.image2 {
-    content:url(Images/MON_9817_r.JPG);
-    /* padding-left: 900px; */
-    padding-top: 200px;
-    width: 500px;
-}
-
 div.image3 {
-    content:url(Images/Scan\ 1.jpeg);
-    padding-left: 900px;
-    padding-top: 200px;
-    width: 500px;
+    content:url(Images/10.JPG);
+    width: 30vw;
+    padding-left: 60vw;
 }
 
         
@@ -117,6 +109,19 @@ div.image3 {
 
 #mobile-menu {
     display: none;
+}
+#about {
+    padding: 20px;
+    font-size: 68px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+#mphotos a {
+    font-size: 42px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
 }
 
 @media screen and (max-width: 992px) {

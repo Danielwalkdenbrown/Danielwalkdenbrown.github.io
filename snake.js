@@ -7,12 +7,11 @@ firebase.initializeApp({
 var db = firebase.firestore();
 
 let highScore = 0;
-db.collection("scores").orderBy('score', 'desc').limit(1).get().then((querySnapshot) => {
+db.collection("namedScores").orderBy('score', 'desc').limit(1).get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
         highScore = doc.data().score;
         const highScoreElement = document.getElementById('high-score');
-        highScoreElement.innerHTML = 'High score: ' + highScore;
-        console.log('high score', doc.data().score);
+        highScoreElement.innerHTML = `High score: ${highScore}<br/>by ${doc.data().name}`;
     });
 });
 
@@ -47,14 +46,39 @@ let foodY = -1;
 let score = 0;
 
 const Restart_Button = document.getElementById('restart-button');
+const submitGroup = document.getElementById('submit-group');
+const scoreSubmittedMessage = document.getElementById('score-submitted-message');
 
 function restartGame() {
-
     Restart_Button.classList = "hidden";
     main(INITIAL_SNAKE_STATE.slice());
+    submitGroup.style.display = 'none';
+    scoreSubmittedMessage.style.display = 'none';
 }
 
-Restart_Button.addEventListener('click', restartGame)
+function submitScore() {
+    const submitInput = document.getElementById('submit-input');
+    const name = submitInput.value;
+    submitInput.value = "";
+    if (name) {
+        db.collection("namedScores").add({ score, name });
+        if (score > highScore) {
+            highScore = score;
+            const highScoreElement = document.getElementById('high-score');
+            highScoreElement.innerHTML = `High score: ${highScore}<br/>by ${name}`;
+        }
+        submitGroup.style.display = 'none';
+        scoreSubmittedMessage.style.display = 'block';
+    }
+}
+
+Restart_Button.addEventListener('click', restartGame);
+const submitGroupButton = document.getElementById('submit-button');
+submitGroupButton.addEventListener('click', submitScore);
+const submitInput = document.getElementById("submit-input");
+submitInput.addEventListener("keydown", (event) => {
+    if (event.key === 'Enter') submitScore();
+});
 
 function clearCanvas() {
     //  Select the colour to fill the drawing
@@ -99,11 +123,6 @@ function advanceSnake() {
         score += 1;
         // Display score on screen
         document.getElementById('score').innerHTML = "Score: " + score;
-        if (score > highScore) {
-            const highScoreElement = document.getElementById('high-score');
-            highScoreElement.innerHTML = 'High score: ' + score;
-            db.collection("scores").add({ score });
-        }
         // Generate new food location
         setFoodPosition();
     }
@@ -143,7 +162,7 @@ function changeDirection(event) {
         dx = 0;
         dy = SQUARE_SIZE;
     }
-    if (keyPressed === R_KEY && didGameEnd()) {
+    if (keyPressed === R_KEY && didGameEnd() && event.target.tagName !== 'INPUT') {
         restartGame();
     }
 }
@@ -164,6 +183,7 @@ function main(intialPosition) {
         if (didGameEnd()) {
             clearInterval(intervalId);
             Restart_Button.classList = "";
+            submitGroup.style.display = 'flex';
         }
 
     }, 200);

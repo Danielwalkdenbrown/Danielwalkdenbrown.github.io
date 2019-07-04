@@ -25,6 +25,49 @@ canvas {
     color: white;
 }
 
+.submit-container {
+    height: 80px;
+    display: flex;
+}
+
+#submit-group {
+    display: none;
+    margin: 10px auto;
+}
+
+#submit-group input {
+    font-size: 30px;
+    padding: 0 12px;
+    border-radius: 3px;
+    margin-right: 12px;
+    height: 50px;
+    border: none;
+    outline: none;
+}
+
+#submit-group button {
+    font-size: 30px;
+    padding: 0 12px;
+    height: 50px;
+    border-radius: 3px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#submit-group button:hover {
+    background-color: lightgrey;
+}
+
+#score-submitted-message {
+    margin-top: 20px;
+    display: none;
+    margin: 0 auto;
+    color: white;
+    font-size: 42px;
+    font-family: 'Poppins', sans-serif;
+}
+
 h1 {
     text-align: center
 }
