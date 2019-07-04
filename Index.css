@@ -193,14 +193,20 @@ c
     }
     div.image {
         content:url(Images/3.JPG);
-         width: 900px;
-         padding: 0px;
-        }
-        div.image3 {
-            content:url(Images/10.JPG);
-            width: 70vw;
-            padding-left: 1px;
-            padding: 100px;
-        }
+        width: 900px;
+        padding: 0px;
+    }
+    div.image3 {
+        content:url(Images/10.JPG);
+        width: 70vw;
+        padding-left: 1px;
+        padding: 100px;
+    }
+    #landingPage {
+        height: 10vh;
+    }
     
+    .vimeo-wrapper {
+        display: none;
+    }
 }

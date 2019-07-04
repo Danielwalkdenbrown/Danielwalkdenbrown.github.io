@@ -186,7 +186,7 @@ function main(intialPosition) {
             submitGroup.style.display = 'flex';
         }
 
-    }, 200);
+    }, 70);
 };
 
 function randomTen(max) {
