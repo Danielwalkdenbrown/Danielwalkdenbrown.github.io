@@ -92,9 +92,10 @@ div.photo5 {
 
 div.photo6 {
     content:url(Images/6.JPG);
+    padding-bottom: 50vh;
     margin: 0 50px;
-    padding-top: 50vh;
-     width: 20vw;
+    width: 20vw;
+    transform: rotate(180deg);   
 }
 
 #list3 {
@@ -112,8 +113,9 @@ div.photo6 {
 div.photo7 {
     content:url(Images/7.JPG);
     margin: 0 50px;
-    padding-top: 50vh;
-     width: 20vw;
+    padding-bottom: 50vh;
+    width: 20vw;
+    transform: rotate(180deg);
 }
 
 div.photo8 {
@@ -151,6 +153,84 @@ div.photo10 {
 div.photo11 {
     content:url(Images/11.JPG);
     margin: 0 50px;
-    padding-top: 50vh;
-     width: 20vw;
+    padding-left: 400px;
+    padding-bottom: 50px;
+    width: 20vw;
+    transform: rotate(90deg);
+}
+@media screen and (max-width: 992px) {
+
+    #mobile-menu.show {
+        display: block;
+        position: fixed;
+        top: 150px;
+        background-color: black;
+        width: 100vw;
+        height: 10vh;
+        padding-bottom: 20px;
+        transition: 0.2s;
+    }
+
+    #mobile-menu div {
+        padding: 20px 0;
+    }
+
+    #mobile-menu a {
+        color: white;
+        font-size: 42px;
+        padding: 0 40px;
+    }
+
+    #mobile-menu-icon {
+        margin-left: auto;
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+        width: 50px;
+        height: 7px;
+        background-color: white;
+        margin: 8px 0;
+        transition: 0.4s;
+    }
+    
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-11px, 7px);
+        transform: rotate(-45deg) translate(-11px, 7px);
+    }
+    
+    .change .bar2 {
+        opacity: 0;
+    }
+    
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-12px, -10px);
+        transform: rotate(45deg) translate(-12px, -10px);
+    }
+
+    #menu {
+        display: none;
+    }
+    #title {
+        font-size: 80px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+    div.photo {
+        content:url(Images/1.JPG);
+         width: 20vw;
+     
+    }
+    div.photo2 {
+        content:url(Images/2.JPG);
+         width: 20vw;
+     
+    }
+    div.photo3 {
+        content:url(Images/3.JPG);
+        margin: 0 50px;
+        width: 20vw;
+    }
+
 }
