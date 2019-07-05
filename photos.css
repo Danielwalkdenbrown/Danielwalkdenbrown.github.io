@@ -24,6 +24,7 @@ body {
     padding-right: 30px;
     box-sizing: border-box;
     background-color: black;
+    z-index: 100;
 }
 #title {
     font-size: 68px;

@@ -54,6 +54,8 @@ function restartGame() {
     main(INITIAL_SNAKE_STATE.slice());
     submitGroup.style.display = 'none';
     scoreSubmittedMessage.style.display = 'none';
+    score = 0;
+    document.getElementById('score').innerHTML = "Score: 0";
 }
 
 function submitScore() {
@@ -184,6 +186,7 @@ function main(intialPosition) {
             clearInterval(intervalId);
             Restart_Button.classList = "";
             submitGroup.style.display = 'flex';
+
         }
 
     }, 70);
